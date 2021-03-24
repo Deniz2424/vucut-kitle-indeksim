@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EAE8E7"
+    android:rotationX="0"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewkilo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/anton"
+        android:gravity="center"
+        android:text="@string/kilo"
+        android:textColor="#8BC34A"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintHeight_percent="0.054"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.2"
+        tools:text="KİLO" />
+
+    <TextView
+        android:id="@+id/textViewboy"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/anton"
+        android:gravity="center"
+        android:text="@string/boy"
+        android:textColor="#8BC34A"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintHeight_percent="0.054"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewkilo"
+        app:layout_constraintWidth_percent="0.2"
+        tools:text="BOY" />
+
+    <Button
+        android:id="@+id/btnhesapla"
+        style="@android:style/Widget.DeviceDefault.Light.Button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="70dp"
+        android:backgroundTint="#8BC34A"
+        android:fontFamily="@font/audiowide"
+        android:text="@string/hesapla"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintHeight_percent="0.070"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintWidth_percent="0.45" />
+
+    <SeekBar
+        android:id="@+id/seekBarvki"
+        style="@android:style/Widget.DeviceDefault.SeekBar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/vkibar"
+        android:max="40"
+        android:progressBackgroundTint="#00FFFFFF"
+        android:progressTint="#00FFFFFF"
+        android:thumb="?android:attr/fastScrollThumbDrawable"
+        android:thumbTint="@color/design_default_color_on_secondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewidealkilo"
+        app:layout_constraintWidth_percent="0.98" />
+
+    <TextView
+        android:id="@+id/textViewvki"
+        style="@android:style/Widget.DeviceDefault.TextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="91dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="91dp"
+        android:fontFamily="@font/anton"
+        android:gravity="center_horizontal"
+        android:textColor="#8BC34A"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.052"
+        app:layout_constraintHorizontal_bias="0.662"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarvki"
+        app:layout_constraintWidth_percent="0.75"
+        tools:text="vki" />
+
+    <TextView
+        android:id="@+id/textViewidealkilo"
+        style="@android:style/Widget.DeviceDefault.TextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="2dp"
+        android:fontFamily="@font/anton"
+        android:gravity="center_horizontal"
+        android:textColor="#8BC34A"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/seekBarvki"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.052"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintWidth_percent="0.60"
+        tools:text="idealkilo" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="170dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="10dp"
+        android:checkedButton="@id/rbkadin"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edittextyas">
+
+
+        <RadioButton
+            android:id="@+id/rbkadin"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:layout_weight="1"
+            android:background="@drawable/radiobutton"
+            android:button="@drawable/kadnicon"
+            android:buttonTint="@color/kadınicon"
+            android:focusable="auto" />
+
+        <RadioButton
+            android:id="@+id/rberkek"
+            android:layout_width="85dp"
+            android:layout_height="90dp"
+            android:background="@drawable/radiobutton"
+            android:button="@drawable/btnerkekicon"
+            android:buttonTint="@color/erkekicon" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/edittextkilo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="10dp"
+        android:autofillHints=""
+        android:ems="7"
+        android:hint="@string/orn_65_7_kg"
+        android:inputType="numberSigned|number|numberDecimal"
+        app:layout_constraintStart_toEndOf="@+id/textViewkilo"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/edittextboy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="20dp"
+        android:autofillHints=""
+        android:ems="7"
+        android:hint="@string/rn_175_cm"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toEndOf="@+id/textViewboy"
+        app:layout_constraintTop_toBottomOf="@+id/edittextkilo"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/edittextyas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="20dp"
+        android:autofillHints=""
+        android:ems="7"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/edittextboy"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/anton"
+        android:gravity="center"
+        android:text="@string/yas"
+        android:textColor="#8BC34A"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintHeight_percent="0.054"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewboy"
+        app:layout_constraintWidth_percent="0.2" />
+
+    <TextView
+        android:id="@+id/textviewdurum"
+        style="@android:style/Widget.DeviceDefault.TextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/anton"
+        android:gravity="center"
+        android:textColor="@color/yeşil"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintHeight_percent="0.057"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewvki"
+        app:layout_constraintWidth_percent="0.65"
+        tools:text="@string/vkidurum" />
+
+    <Button
+        android:id="@+id/btndetay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:background="#8BC34A"
+        android:text="@string/detay_g_ster"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewvki" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

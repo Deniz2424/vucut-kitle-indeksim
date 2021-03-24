@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">VÜCUT KİTLE İNDEKSİ</string>
+    <string name="hesapla">HESAPLA</string>
+    <string name="erkek">erkek</string>
+    <string name="kad_n">kadın</string>
+    <string name="_0_cm">0 CM</string>
+    <string name="_0_kg">0 KG</string>
+    <string name="todo">TODO</string>
+    <string name="_KG">KG</string>
+    <string name="_CM">CM</string>
+    <string name="_0_CM">cm</string>
+    <string name="KİLO">kilo</string>
+    <string name="yas">YAŞ</string>
+    <string name="boy">BOY</string>
+    <string name="rn_175_cm">Örn: 175 (cm)</string>
+    <string name="kilo">KİLO</string>
+    <string name="vkidurum">vkidurum</string>
+    <string name="orn_65_7_kg">Örn 65.7 (kg)</string>
+    <string name="Zayıf">"Durum: Zayıf "</string>
+    <string name="Hafifzayıf">Durum: Hafif Zayıf</string>
+    <string name="Normal">Durum : Normal</string>
+    <string name="Hafifkilolu">Durum : Hafif Kilolu</string>
+    <string name="Kilolu">Durum : Kilolu</string>
+    <string name="Asırıkilolu">Durum: Aşırı Kilolu</string>
+    <string name="goster">göster</string>
+    <string name="durumu">durumu</string>
+    <string name="durumunuz">Durumunuz</string>
+    <string name="detay_g_ster">DETAY GÖSTER</string>/>
+
+</resources>
