@@ -38,10 +38,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void durumgoster(){
-        if (edittextkilo.getText().toString().matches("")||edittextboy.getText().toString().matches("")||edittextyas.getText().toString().matches("")) {
+        if (edittextkilo.getText().toString().matches("")||edittextboy.getText().toString().matches("")||edittextyas.getText().toString().matches("")|| doublevki==0.0) {
             Toast toast = Toast.makeText(MainActivity.this,"Lütfen boşlukları dolduralım", Toast.LENGTH_LONG);
             toast.setGravity(Gravity.CENTER, 0, 0);
             toast.show();
+
         }
         else {
             String durumbilgi=textviewdurum.getText().toString();
@@ -59,11 +60,13 @@ public class MainActivity extends AppCompatActivity {
             Toast toast = Toast.makeText(MainActivity.this,"Lütfen boşlukları dolduralım", Toast.LENGTH_LONG);
             toast.setGravity(Gravity.CENTER, 0, 0);
             toast.show();
+
             }
         else{
             vkihesapla(kilo, boy);
                 idealhesapla(boy);
                 seekBarvki.setProgress(vki.intValue());
+
                 vkidurumgoster();
         }
     }
@@ -88,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-
+   //indeks değerine göre durum gösteriyoruz.
     public void vkidurumgoster(){
         doublevki=Double.parseDouble(String.valueOf(vki));
       if(18.5 > doublevki){
@@ -144,7 +147,7 @@ public class MainActivity extends AppCompatActivity {
         edittextboy=findViewById(R.id.edittextboy);
         edittextyas=findViewById(R.id.edittextyas);
         textviewdurum=findViewById(R.id.textviewdurum);
-
+        seekBarvki.setEnabled(false);
         addListenerOnButton();
 
         edittextkilo.addTextChangedListener(new TextWatcher() {

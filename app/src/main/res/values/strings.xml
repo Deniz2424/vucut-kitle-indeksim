@@ -25,6 +25,9 @@
     <string name="goster">göster</string>
     <string name="durumu">durumu</string>
     <string name="durumunuz">Durumunuz</string>
-    <string name="detay_g_ster">DETAY GÖSTER</string>/>
+    <string name="detay_g_ster">DETAY GÖSTER</string>
+    <string name="l_stele">LİSTELE</string>
+    <string name="button">Button</string>
+    <string name="sil">SİL</string>/>
 
 </resources>

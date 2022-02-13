@@ -1,31 +1,31 @@
 package com.myApp.vucutkitlendeksim;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
-import java.util.LinkedList;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class Database extends SQLiteOpenHelper {
-    private static final String DATABASE_NAME = "indeksim";
-    private static final String TABLE_NAME = "indeksdegerim";
+    private static final String DATABASE_NAME = "INDEKSIM";
+    private static final String TABLE_NAME = "INDEKSDEGERIM";
     private static final int VERSION = 1;
-    private static final String Vki_deger = "vki";
-    private static final String Tarih="tarih ";
-
-
+    private static final String VKIDEGER ="VKI";
+    private static final String TARIH ="TAKVIM";
+    
     public Database(Context context) {
         super(context, DATABASE_NAME, null, VERSION);
     }
 
-    SQLiteDatabase sqLiteDatabase;
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE " + TABLE_NAME + "(id INTEGER PRIMARY KEY AUTOINCREMENT," + Vki_deger + " TEXT,"+ Tarih+" TEXT);");
+        db.execSQL("CREATE TABLE " + TABLE_NAME + "(id INTEGER PRIMARY KEY AUTOINCREMENT," + VKIDEGER + " TEXT,"+TARIH+" TEXT); ");
     }
 
     @Override
@@ -34,12 +34,12 @@ public class Database extends SQLiteOpenHelper {
         this.onCreate(db);
     }
 
-    public void veriekle(String Vki,String tarih) {
+    public void veriekle(String Vki, String tarih)  {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
-        cv.put(Vki_deger, Vki.trim());
-        cv.put(Tarih,tarih.trim());
-        long r = db.insert(TABLE_NAME, null, cv);
+        cv.put(VKIDEGER,Vki.trim());
+        cv.put(TARIH,tarih.trim());
+        long r = db.insert(TABLE_NAME,null,cv);
         if (r > -1)
             Log.i("tag", "İşlem Başarılı");
         else
@@ -49,17 +49,17 @@ public class Database extends SQLiteOpenHelper {
 
     public void verisil(String Vki) {
         SQLiteDatabase db = this.getWritableDatabase();
-        db.delete(TABLE_NAME, Vki_deger + "=?", new String[]{String.valueOf(Vki)});
+        db.delete(TABLE_NAME, VKIDEGER+"=? ",new String[]{String.valueOf(Vki)});
         db.close();
     }
 
-    public LinkedList<String> veriListeleri() {
-        LinkedList<String> veriler = new LinkedList<String>();
+    public List<String> veriListeleri() {
+        List<String> veriler = new ArrayList<>();
         SQLiteDatabase db = this.getWritableDatabase();
-        String[] sutunlar = {Vki_deger,Tarih};
-        Cursor cr = db.query(TABLE_NAME, sutunlar, null, null, null, null, null);
+        String[] sutunlar = {VKIDEGER,TARIH};
+        @SuppressLint("Recycle") Cursor cr = db.query(TABLE_NAME, sutunlar, null, null, null, null, null);
         while (cr.moveToNext()) {
-            veriler.add(cr.getString(0));
+            veriler.add(cr.getString(0) +"            "+ cr.getString(1) );
         }
         return veriler;
     }
